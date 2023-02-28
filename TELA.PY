@@ -1,6 +1,7 @@
 import customtkinter as ctk
 from tkinter import *
 from tkinter import ttk
+from tkinter import messagebox
 
 
 janela = ctk.CTk()
@@ -48,7 +49,12 @@ class Applicatiom():
 
         checkbox= ctk.CTkCheckBox(master=login_frame, text="Lembra-se de mim sempre").place(x=25, y=235)
 
-        login_button = ctk.CTkButton(master=login_frame, text="LOGIN",width=300).place(x=25, y=285)
+        def login ():
+            
+            msg= messagebox.showinfo(title="Estado de login",message="Parabens! Login feiot com sucesso.")
+            pass
+
+        login_button = ctk.CTkButton(master=login_frame, text="LOGIN",width=300,command=login).place(x=25, y=285)
 
         resgister_span= ctk.CTkLabel(master=login_frame, text="Não tem conta?").place(x=25, y=325)
 
@@ -78,7 +84,12 @@ class Applicatiom():
 
 
             back_button = ctk.CTkButton(master=rg_frame, text="VOLTAR",width=145,fg_color="gray",hover_color="#202020", command=back).place(x=25, y=300)
-            save_button = ctk.CTkButton(master=rg_frame, text="CADASTRAR",width=145,fg_color="green",hover_color="#014B05").place(x=180, y=300)
+            
+            def save_user():
+                msg = messagebox.showinfo(title="Estado do Cadastro", message="Parabens! Usuario cadastrado com sucesso.")
+                
+                pass
+            save_button = ctk.CTkButton(master=rg_frame, text="CADASTRAR",width=145,fg_color="green",hover_color="#014B05",command= save_user).place(x=180, y=300)
 
 
 
