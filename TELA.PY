@@ -24,6 +24,8 @@ class Applicatiom():
         self.janela.title("sistema de login")
         self.janela.iconbitmap("logocomal(certo).ico")
         self.janela.resizable(False, False)
+        
+        
   
     def tela_login(self):
         #imagem na tela
@@ -51,7 +53,7 @@ class Applicatiom():
 
         def login ():
             
-            msg= messagebox.showinfo(title="Estado de login",message="Parabens! Login feiot com sucesso.")
+            msg= messagebox.showinfo(title="Estado de ",message="Parabens! Login feito com sucesso.")
             pass
 
         login_button = ctk.CTkButton(master=login_frame, text="LOGIN",width=300,command=login).place(x=25, y=285)
