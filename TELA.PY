@@ -40,11 +40,11 @@ class Applicatiom():
         label = ctk.CTkLabel(master=login_frame, text="Sistema de login", font=("Roboto",20))
         label.place(x=25, y=5)
 
-        username_entry = ctk.CTkEntry(master=login_frame, placeholder_text="Nome de usuario", width=300, font=("Roboto",14)).place(x=25, y=5)
-        # username_label = ctk.CTkLabel(master=login_frame,text="*O campo nome de usuario e de caracter e obrigatorio."tex_color="green",font=("Roboto",8)).place(x=25, y=135)
+        username_entry = ctk.CTkEntry(master=login_frame, placeholder_text="Nome de usuario", width=300, font=("Roboto",14)).place(x=25, y=105)
+        username_label = ctk.CTkLabel(master=login_frame,text="*O campo nome de usuario e de caracter e obrigatorio.",font=("Roboto",8)).place(x=25, y=135)
 
         password_entry = ctk.CTkEntry(master=login_frame, placeholder_text="senha de usuario", width=300, font=("Roboto",8), show="*").place(x=25, y=175)
-        # passowor_label = ctk.CTkLabel(master=login_frame,text="*O campo nome de usuario e de caracter e obrigatorio."tex_color="green",font=("Roboto",8)).place(x=25, y=205)
+        passowor_label = ctk.CTkLabel(master=login_frame,text="*O campo nome de usuario e de caracter e obrigatorio.",font=("Roboto",8)).place(x=25, y=205)
 
         checkbox= ctk.CTkCheckBox(master=login_frame, text="Lembra-se de mim sempre").place(x=25, y=235)
 
