@@ -52,8 +52,39 @@ class Applicatiom():
 
         resgister_span= ctk.CTkLabel(master=login_frame, text="Não tem conta?").place(x=25, y=325)
 
+        def tela_register():
+            #removendo o frame de login
+            login_frame.pack_forget()
+            #criando a tela de cadastro de usuarios
+            rg_frame = ctk.CTkFrame(master=janela, width=350, height=396)
+            rg_frame.pack(side=RIGHT)
+            
+            label = ctk.CTkLabel(master=rg_frame, text= "FACA O SEU CADASTRO", font=("Roboto",20)).place(x=25, y=5)
+            span = ctk.CTkLabel(master=rg_frame, text="Por favor preencha todos os campos corretos.",font=("Roboto",10),text_color="gray").place(x=25, y=65)
+            
+            username_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="Nome de usuario", width=300, font=("Roboto",14)).place(x=25, y=105)
+            email_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="E-mail de usuario", width=300, font=("Roboto",14)).place(x=25, y=145)
+            pass_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="Senha do usuario", width=300, font=("Roboto",14),show="*").place(x=25, y=185)
+            cPass_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="Confirma senha", width=300, font=("Roboto",14),show="*").place(x=25, y=225)
+            
+            checkbox = ctk.CTkCheckBox(master=rg_frame, text="Aceito dos termos e Politicas").place(x=25, y=265)
+            
+            def back():
+                #removendo frame de cadastro
+                rg_frame.pack_forget()
+
+                #Devolvendo o frame de login
+                login_frame.pack(side=RIGHT)
+
+
+            back_button = ctk.CTkButton(master=rg_frame, text="VOLTAR",width=145,fg_color="gray",hover_color="#202020", command=back).place(x=25, y=300)
+            save_button = ctk.CTkButton(master=rg_frame, text="CADASTRAR",width=145,fg_color="green",hover_color="#014B05").place(x=180, y=300)
+
+
+
+            pass
         register_button = ctk.CTkButton(master=login_frame, text="CADASTRAR",width=150,
-        fg_color="green", hover_color="#2D9334").place(x=150, y=325)
+        fg_color="green", hover_color="#2D9334", command=tela_register).place(x=150, y=325)
 
 Applicatiom()       
 
