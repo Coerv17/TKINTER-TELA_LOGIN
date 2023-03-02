@@ -1,0 +1,9 @@
+def usu():
+                username = username_entry.get()
+                email = email_entry()
+                passw = pass_entry.get()
+                Cpass= cPass_entry.get()
+                database.cursor.execute('''
+                INSERT INTO users(Username,Email,Senha,Confsenha(username,email,passw,Cpass)VALUES(?, ?, ?, ?))
+                ''',(username, email, passw, Cpass))
+                database.conn.commit()
